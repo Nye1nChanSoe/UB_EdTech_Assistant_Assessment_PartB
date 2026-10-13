@@ -771,6 +771,7 @@ COUNTRY_NAMES = {
     "people's republic of bangladesh": "Bangladesh",
     "people's republic of china": "China",
     "peru": "Peru",
+    "philipines": "Philippines",
     "philippines": "Philippines",
     "pitcairn": "Pitcairn",
     "plurinational state of bolivia": "Bolivia",

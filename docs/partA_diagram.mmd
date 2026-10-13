@@ -1,0 +1,42 @@
+---
+config:
+  theme: neo
+  look: neo
+---
+flowchart TD
+    applicant(["`**Applicant**
+    faculty member or administrator`"])
+    old["`**Old forms** (transition only)
+    exports from Microsoft Forms and SurveyMonkey Apply`"]
+
+    subgraph ub["Controlled by the United Board"]
+        ref[["`**Reference lists**
+        one approved name for each institution and country`"]]
+        form["`**Application form**
+        lists, email check, required fields`"]
+        holding["`**Holding table**
+        waiting area before the main database`"]
+        job["`**Matching job**
+        cleans, merges duplicates, compares with existing records, sets a status`"]
+        queue["`**Review queue**
+        staff decide the uncertain records; every decision is logged`"]
+        dash["`**Staff dashboard**
+        search, reports, export to Excel`"]
+    end
+
+    main[("`**Main participant database**
+    Salesforce at the start`")]
+
+    applicant --> form
+    form -- "checked submission" --> holding
+    old -- "export file" --> holding
+    holding --> job
+    job -- "New / Update existing record" --> main
+    job -- "Needs review" --> queue
+    queue -- "staff decision" --> main
+    main --> dash
+    ref -. "fills the lists" .-> form
+    ref -. "used for matching" .-> job
+    queue -. "confirmed spelling saved" .-> ref
+
+    style ub fill:#f4f7ff,stroke:#5b6ee1,stroke-width:1.5px,stroke-dasharray:6 5

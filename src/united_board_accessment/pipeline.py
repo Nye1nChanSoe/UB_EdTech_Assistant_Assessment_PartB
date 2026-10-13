@@ -172,12 +172,20 @@ def log_issue(
     log.append(dict(zip(LOG_COLS, row)))
 
 
+def cleanup_label(field: str, raw_value: str) -> tuple[str, str]:
+    """Issue label and action for a cleanup change. A country that is not a code is a variant."""
+    if field == "country" and to_key(raw_value) not in COUNTRY_CODE_LOOKUP:
+        return "Country variant", "Mapped to master name"
+    return CLEANUP[field]
+
+
 def log_cleanup(raw: pd.DataFrame, norm: pd.DataFrame, log: list[dict]) -> None:
     """Log each value that normalisation changed, by id, so merged-away rows are covered."""
     raw, norm = raw.set_index("id"), norm.set_index("id")
-    for field, (issue, action) in CLEANUP.items():
+    for field in CLEANUP:
         for app_id in raw.index[raw[field] != norm[field]]:
             who = norm.at[app_id, "full_name"] or NO_NAME
+            issue, action = cleanup_label(field, raw.at[app_id, field])
             log_issue(log, app_id, who, issue, action, raw.at[app_id, field], norm.at[app_id, field])
 
 

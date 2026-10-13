@@ -90,7 +90,7 @@ A record gets the first status that applies.
 
 **`import_ready_list.csv`**: one row per person (11), with the cleaned values and a `status`. `submission_ids` links each row to the issues log.
 
-**`issues_log.csv`**: one row per issue (18), for every record changed, excluded or flagged.
+**`issues_log.csv`**: one row per issue (19), for every record changed, excluded or flagged.
 
 | Column      | Meaning                                                    |
 | ----------- | ---------------------------------------------------------- |
@@ -108,3 +108,9 @@ A record gets the first status that applies.
 | New                    | 3      |
 | Update existing record | 3      |
 | Needs review           | 5      |
+
+## Proposed workflow (Part A)
+
+This pipeline is a working version of the matching job in the workflow proposed in Part A.
+
+![Proposed workflow](docs/partA_diagram.png)

@@ -1,13 +1,15 @@
 [project]
 name = "united-board-accessment"
 version = "0.1.0"
-description = "Add your description here"
+description = "For United Board Interview Assessment"
 readme = "README.md"
 authors = [
     { name = "Nyein Chan Soe", email = "nyeinchansoe.business@gmail.com" }
 ]
 requires-python = ">=3.11"
-dependencies = []
+dependencies = [
+    "pandas>=3.0.6",
+]
 
 [project.scripts]
 united-board-accessment = "united_board_accessment:main"
@@ -15,3 +17,8 @@ united-board-accessment = "united_board_accessment:main"
 [build-system]
 requires = ["uv_build>=0.12.18,<0.13.0"]
 build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.4.0",
+]

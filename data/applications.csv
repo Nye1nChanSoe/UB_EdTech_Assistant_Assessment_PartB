@@ -1,0 +1,13 @@
+id,submitted,full_name,email,institution,country,position,endorsement
+1,05 Jan 2027,Marisol Tavera,m.tavera@su.example,Silliman University,Philippines,Associate Professor,Yes
+2,05 Jan 2027,rohan varghese,rohan.varghese@mcc.example,Madras Christian College,India,Dean,Yes
+3,06 Jan 2027,Rohan Varghese,rohan.varghese@mcc.example,Madras Christian Coll.,India,Dean,Yes
+4,06 Jan 2027,Sekar Wulandari,sekar.w@ukdw.example,UKDW,Indonesia,Lecturer,No
+5,07 Jan 2027,Liza Camposano,l.camposano@su.example,Silliman Univ.,PH,Lecturer,Yes
+6,08 Jan 2027,Kavitha Mohandas,kavitha.m@ldc.example,Lady Doak College,India,Head of Department,Yes
+7,08 Jan 2027,Dimas Prakoso,dimas.prakoso@uksw,Satya Wacana Christian University,Indonesia,Lecturer,Yes
+8,09 Jan 2027,Nattaya Rungrot,nattaya.r@payap.example,Payap University,Thailand,,Yes
+9,09 Jan 2027,Rafael Mendiola,r.mendiola@cpu.example,Central Philipine University,Philippines,Associate Professor,Yes
+10,10 Jan 2027,Pimchanok Thawee,pimchanok.t@payap.example,Payap University,Thailand,Lecturer,Yes
+11,10 Jan 2027,,j.koshy@mcc.example,Madras Christian College,India,Lecturer,Yes
+12,11 Jan 2027,Tiur Situmorang,tiur.s@ukdw.example,Duta Wacana Christian University,Indonesia,Lecturer,Yes
